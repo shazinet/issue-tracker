@@ -1,7 +1,6 @@
 import IssueStatusBadge from "@/app/components/IssueStatusBadge";
 import prisma from "@/prisma/client";
 import { Card, Flex, Heading, Text } from "@radix-ui/themes";
-import delay from "delay";
 import { notFound } from "next/navigation";
 import Markdown from "react-markdown";
 
@@ -15,8 +14,6 @@ const IssueSinglePage = async ({ params }: Props) => {
   });
 
   if (!isssue) notFound();
-
-  await delay(2000);
 
   return (
     <div className="max-w-xl">
