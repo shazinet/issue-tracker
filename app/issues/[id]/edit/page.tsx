@@ -21,7 +21,7 @@ const EditIssuePage = async ({ params }: Props) => {
 
   return (
     <>
-      Issue page <IssueForm issue={issue} />
+      <IssueForm issue={issue} />
     </>
   );
 };
