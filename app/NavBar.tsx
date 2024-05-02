@@ -12,6 +12,8 @@ const NavBar = () => {
   const links = [
     { label: "Dashboard", href: "/" },
     { label: "Issues", href: "/issues/list" },
+    { label: "Sign in", href: "/api/auth/signin" },
+    { label: "Sign out", href: "/api/auth/signout" },
   ];
   return (
     <nav className="flex space-x-6 border-b h-14 mb-5 items-center px-5">
