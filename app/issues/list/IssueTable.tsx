@@ -4,7 +4,7 @@ import { Table } from "@radix-ui/themes";
 import Link from "next/link";
 import React from "react";
 import NextLink from "next/link";
-import { Status, Issue } from "@prisma/client";
+import { Issue, Status } from "@prisma/client";
 
 export interface IssueQuery {
   status: Status;
@@ -69,6 +69,6 @@ const columns: { label: string; value: keyof Issue; className?: string }[] = [
   { label: "Created", value: "createdAt", className: "hidden md:table-cell" },
 ];
 
-export const columnNames = columns.map((column) => column.label);
+export const columnNames = columns.map((column) => column.value);
 
 export default IssueTable;
